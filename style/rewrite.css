@@ -1,0 +1,108 @@
+#desktop-rewrite-bg {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #000306; /* For browsers that do not support gradients */
+  /* background-image: -webkit-radial-gradient(bottom,#0088FF,#000306); */
+  background-image: radial-gradient(
+    circle at 50% 400%,
+    #0055aa 30%,
+    #000306 88%
+  );
+}
+#desktop-rewrite-intro {
+  position: absolute;
+  top: calc(35vh + 170px);
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+#desktop-rewrite-intro-reflect {
+  margin-top: 3vh;
+  transform: scaleY(-1);
+  opacity: 0.2;
+}
+#desktop-rewrite-moon,
+#desktop-rewrite-reflect-0,
+#desktop-rewrite-reflect-1,
+#desktop-rewrite-reflect-2,
+#desktop-rewrite-reflect-3 {
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#desktop-rewrite-moon {
+  cursor: pointer;
+  top: 35%;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 0 50px -2px #0055aa, inset 0 0 4px 1px #0055aa;
+}
+#desktop-rewrite-reflect-0 {
+  top: calc(74% + 32px); /*  M + (100% - M) * 60%; M = 35% + 80px;  */
+  width: 30px;
+  height: 15px;
+  background-color: #012aff;
+  box-shadow: 0 0 10px 1px #012aff, inset 0 0 5px #001122;
+}
+#desktop-rewrite-reflect-1 {
+  top: calc(74% + 97px); /* R0 + 60px */
+  width: 100px;
+  height: 30px;
+  background-color: #002c95;
+  box-shadow: 0 0 30px 30px #002c95;
+}
+#desktop-rewrite-reflect-2 {
+  top: calc(74% + 222px); /* R1 + 55px */
+  width: calc(280vh - 1520px); /* around 10 * (100vh-top)*/
+  height: calc(192vh - 1044px); /* around 6.8694 * (100vh-top) */
+  background-color: #002c95;
+  box-shadow: 0 0 80px 80px #002c95;
+}
+#desktop-rewrite-reflect-3 {
+  top: calc(74% + 77px); /* R0 + 60px */
+  width: 10px;
+  height: 150px;
+  background-color: #012aff; /* R0 + 70px */
+  box-shadow: 0 0 10px 5px #012aff;
+  transition: opacity 3s;
+  opacity: 0;
+}
+
+/* halo animation */
+
+.desktop-rewrite-halo-wrapper {
+  position: absolute;
+  opacity: 0.3;
+}
+.desktop-rewrite-halo {
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+  transition: 300ms;
+}
+
+/* orb animation */
+#desktop-rewrite-curtain-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#desktop-rewrite-curtain {
+  transition-duration: 2s;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.desktop-rewrite-orb {
+  position: absolute;
+  top: 100%;
+  border-radius: 50%;
+  background: radial-gradient(white 30%, transparent 50%);
+}
